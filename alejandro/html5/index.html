@@ -36,29 +36,64 @@
     		
 		}
 
-		ul > li{
-			display: inline;
+	
+		.menu_navbar li a {
+			color: white;
+			display: block;
 			padding: 10px 20px 5px 10px;
 		}
 
-		ul > li:hover {
+		.menu_navbar li a:hover {
 			color: gray;
 			cursor: pointer;
 		}
+
+		.menu_navbar > li{
+			float: left;
+		}
+
+		.menu_navbar li ul{
+			display: none;
+			position: absolute;
+			min-width: 140px;
+
+		}
+
+		.menu_navbar li:hover > ul{
+			display: block;
+		}
+
+		.menu_navbar li ul li{
+			position: relative;
+		}
+
+		.menu_navbar li ul li ul{
+			right: -140px;
+			top: 0;
+		}
+
+		.container{}
 
 
 	</style>
 </head>
 <body>
-		<nav class="menu_navbar">
-			<ul>
-				<li>Yo</li>
-				<li>Resumen</li>
-				<li>Contacto</li>
-				<li>Recursos</li>
-				<li>Blog</li>
+		<div>
+			<ul class="menu_navbar">
+				<li><a href="#">Yo</a></li>
+				<li><a href="#">Resumen</a></li>
+				<li><a href="#">Contacto</a>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">YouTube</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Recursos</a></li>
+				<li><a href="#">Blog</a></li>
 			</ul>
-		</nav>
+		</div>
 		<div class="container">
 			<h1 id="message" class="saludo"></h1>
 			<div>
