@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UFT-8" />
+        <meta lang="en">
+        <title>Example Back-end and Front-end with EcmaScript6</title>
+        <style type="text/css">
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --primary-color: #aacc;
+                --default-text-size: 16px;
+            }
+
+            div{
+                box-sizing: border-box;
+                background-color: var(--primary-color);
+                display: inline-block;
+                font-size: var(--default-text-size);
+                height: 20px;
+                width: 50%;
+            }
+
+            @media screen and (max-width: 900px) {
+                div{
+                    width: 100%;
+                }
+            }
+
+            body{
+                background-color: azure;
+            }
+
+            .message{
+                font-size: 24px;
+                color: blue;
+            }
+
+            .table-users{
+                text-align: left;
+                border: 1px solid;
+            }
+
+            .table-users > tr{
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div id="message" class="message"></div><br/>
+            <br>
+            <div>
+                <table border id="table" class="table-users"></table>
+            </div>
+        </section>
+        <script type="text/javascript">
+            'use strict';
+            (function IIFE() {
+                const URL = 'https://jsonplaceholder.typicode.com/';
+
+                //message of welcome to the user
+                document.getElementById('message').innerHTML = '<span>Select a item to look </span><br>';
+
+                /**
+                 * This nethod validate a response if not code 200 write on message and return a null
+                 * @param response
+                 * @returns {response|null}
+                 */
+                const validateResponse = (response) => {
+                    if (response.status !== 200) {
+                        const message = document.getElementById('message');
+                        message.innerText = 'Looks like there was a problem. Status code: ' + response.status;
+                        return;
+                    }
+                    return response;
+                };
+
+                /**
+                 * This method return a table HTML to view the data
+                 * @param response
+                 */
+                const getUsers = (response) => {
+
+                    validateResponse(response);
+
+                    response.json().then((users) => {
+                        const message = document.getElementById('message');
+                        message.innerText = 'The connection is success: ' + URL;
+                        const tableData = document.getElementById('table');
+                        tableData.innerHTML = `<thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead>`;
+
+                        for (const user of users) {
+                            tableData.innerHTML += `<tr><th> ${user.id} </th><th> ${user.name} </th><th> ${user.email} </th></tr>`;
+                        }
+                    });
+                };
+
+                 /**
+                 * This method require a typeResquest to request at api
+                 * @param typeRequest
+                 */
+                const getRequest = (typeRequest = 'users') => {
+                    fetch
+                    (URL + typeRequest)
+                        .then(response => getUsers(response))
+                        .catch(function (error) {
+                            document.getElementById('message').innerText = "Fetch Error : -S" + error;
+                        });
+                };
+                
+            })getRequest();
+        </script>
+    </body>
+</html>

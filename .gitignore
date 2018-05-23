@@ -1,2 +1,5 @@
 .idea/
-.*txt
+*.txt
+*.sublime-project
+*.sublime-workspace
+
