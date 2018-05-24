@@ -139,11 +139,40 @@
 			display: hidden;
 		}
 
-		.content{
+		.container .content{
 			color: var(--text-color);
 			font-size: 16px;
 			padding: 10px;
 			margin-bottom: 20px;
+		}
+
+		.container .btnContainer{
+			text-align: center;
+			padding: 10px;
+		}
+
+		.container .btnContainer #btnModal{
+			padding: 10px;
+    		border-radius: 5px;
+    		background: #960934;;
+    		color: white;
+    		font-size: 16px;
+    		cursor: pointer;
+    		box-shadow: 0 5px var(--menu-color);
+		}
+
+		.container .btnContainer #btnModal:hover{
+			background: white;
+			color: var(--menu-color);
+		}
+
+		.container .btnContainer #btnModal:active{
+			transform: translateY(3px);
+			box-shadow: 0 1px var(--menu-color);
+		}
+
+		.container .btnContainer #btnModal{
+
 		}
 
 		@media only screen and (max-width: 500px) {
@@ -171,10 +200,7 @@
     			width: 30px;
     			cursor: pointer;
 			}
-
-
 		}
-
 
 
 	</style>
@@ -213,6 +239,9 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ullam minus nulla perspiciatis nemo. Cumque ex doloremque eaque veniam earum nemo ab commodi fugit, sit, nihil laboriosam nostrum quia voluptas.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veniam repudiandae eligendi corrupti beatae aut, officiis quas, quidem ut nobis nemo, officia quo a quae optio, perspiciatis pariatur animi rem?</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse temporibus tempora commodi dolorem culpa dolorum ipsam, ipsa, corporis consequuntur incidunt, officiis odit. Minus sunt, fugiat! Velit eaque perspiciatis sed.</p>
+			</div>
+			<div class="btnContainer">
+				<button id="btnModal" name="btnModal" class="btnModal">Click Here!</button>
 			</div>
 			<div class="sociales">
 				<a href="#" class="fa fa-facebook"></a>
