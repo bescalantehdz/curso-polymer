@@ -1,6 +1,3 @@
 .idea/
+*/node_modules
 *.txt
-*.sublime-project
-*.sublime-workspace
-*/node_modules/
-*/.DS_Store
