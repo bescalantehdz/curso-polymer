@@ -73,8 +73,7 @@
 		}
 
 		.menu_navbar li:hover > ul{
-			di
-			splay: block;
+				splay: block;
 		}
 
 		.menu_navbar li ul li{
@@ -140,6 +139,19 @@
 			color: var(--text-color);
 		}
 
+		.container .texto p{
+				color: orange;
+				padding: 20px 15px 30px 10px;
+		}
+
+
+
+		.container .texto p::first-line{
+
+				color: blue;
+		}
+
+
 		@media only screen and (max-width: 500px ){
 
 			.menu .menu_navbar{
@@ -168,11 +180,8 @@
 				width: 20px;
 				cursor: pointer
 			}
-          
-
-		}
-
-	 </style>
+		}	
+		</style>
 </head>
 <body class = "container-color">
 	<div class="menu"> 
@@ -208,6 +217,12 @@
     		<img src="./img/panda.jpg">
     	</div>
     	<div class = "message" id= "message"></div>
+	    <div class="texto">
+			<p> 
+				Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto
+		        
+		    </p>
+	    </div>
 
     	<div class="sociales">
     		<a href="#" class="fa fa-facebook"></a>
