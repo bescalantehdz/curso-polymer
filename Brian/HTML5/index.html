@@ -32,6 +32,7 @@
 			--background-color: #BC325A;
 			--presentation-text-size: 28px;
 			--text-color: #fff;
+			--background-color-resumen:#fff;
 		}
 
 		.imagen{
@@ -87,11 +88,10 @@
 		}
 
 		.container{
-			background: var(--background-color);
-			margin-top: 70px;
+			
 		}
 
-		.container-color{
+		.container_color{
 			background: var(--background-color);
 		}
 
@@ -105,7 +105,7 @@
 		}
 
 		.menu{
-			height: 70px;
+			
 		}
 
 		.container .imagen{
@@ -136,17 +136,125 @@
 			color: var(--text-color);
 		}
 
-		.container .texto p{
+		.container .content p{
 				color: orange;
 				padding: 20px 15px 30px 10px;
 		}
 
 
 
-		.container .texto p::first-line{
+		.container .content p::first-line{
 
 				color: blue;
 		}
+
+		.contain .button_ctn{
+			text-align: center;
+			padding: 10px;
+		}
+
+		.container .button_ctn  #btn{
+			padding: 10px;
+			border-radius: 5px;
+			background: #960934;
+			color: white;
+    		font-size: 16px;
+    		cursor: pointer;
+    		box-shadow: 0 5px var(--menu-color);
+		}
+
+		.container .button_ctn #btn:hover{
+			background: white;
+			color: var(--menu-valor);
+		}
+
+		.container .button_ctn #btn:active{
+			transform: translateY(3px);
+			box-shadow: 0 1px var(--menu-color);
+		}
+
+		.container .button_ctn #btn{
+
+		}
+
+		.container #yo{
+           background: var(--background-color);
+           padding: 100px 20px 10px 20px;
+		}
+
+		
+
+		.container #resumen{
+			background: var(--background-color-resumen);
+			padding: 100px 100px 10px;
+			display: block;
+		}
+
+		.container #resumen .titulo::first-line{
+			color:red;
+		}
+
+		.container #resumen .sub-tema{	
+			color: #21b080;
+		}
+
+		.container #resumen .sub-tema .informacion{
+			display: block;
+			font-size: 15px;
+			color: blue;
+		}
+
+		.container .hidden{
+			display: none;
+		}
+
+		#modal{
+			/*pone la imagen en medio*/
+			margin: 0 auto;
+		}
+
+		#modal .btn-close{
+
+			padding: 10px;
+			float:right;
+			margin:10px;
+			background: green;
+			cursor: pointer;
+			border-radius: 5px;
+			box-shadow: 0 1px var(--menu-color);		
+		}
+
+		#modal .btn-close{
+			transform: translateY(3px);
+		}
+
+		.container .recursos .container-text h2{
+			color: #3390FF;
+			display:block;
+			padding: 0px 100px;
+		}
+
+
+		.container .recursos .container-text .git{
+			display:block;
+			padding: 0px 100px;
+			font-weight: bold;
+		}
+
+
+		.container .recursos .container-text .java{
+			display:block;
+			padding: 0px 100px;
+			font-weight: bold;
+		}
+
+
+		.container .recursos .container-text .mysql{
+			font-weight:bold;
+			display:block;
+			padding: 0px 100px;
+		}
+
 
 
 		@media only screen and (max-width: 500px ){
@@ -177,24 +285,24 @@
 				width: 20px;
 				cursor: pointer
 			}
-		}	
-		</style>
+		}
+	</style>
 </head>
-<body class = "container-color">
+<body>
 	<div class="menu"> 
       	<ul class="menu_navbar">
       		
-      		<li><a href="#">YO</a></li>
-      	    <li><a href="#">Resumen</a></li>
-      	    <li><a href="#">Contacto</a>
+      		<li><a href="#"id="option_yo">YO</a></li>
+      	    <li><a href="#" id="option_resumen">Resumen</a></li>
+      	    <li><a href="#"" id="option_contacto">Contacto</a>
 			<ul>
   				<li><a href="#">Facebook</a></li>
   				<li><a href="#">Twitter</a></li>
   				<li><a href="#">Instagram</a></li>
   				<li><a href="#">Youtube</a></li>
   			</ul>	
-				<li><a href="">Recursos</a></li>
-      	     	<li><a href="">Blog</a></li>
+				<li><a href="#" id="option_recursos">Recursos</a></li>
+      	     	<li><a href="#" id="option_blog">Blog</a></li>
       	</ul>
       	<div class="menu_mobile">
       		
@@ -206,35 +314,154 @@
       		</ul>
       	</div>
     </div>
+	<div class="container">
+    	<div  id="yo" class="yo">
+	    	<div class ="imagen">
+	    		<img src="./img/mainphoto.jpg">
+	    	</div>
+	    	<div class = "message" id= "message"></div>
+		    <div class="content">
+				
+		    </div>
 
-    
+		    <div class="button_ctn">
+		    	<button id="btn" name="btn" class="btn">Click</button>
+		    </div>
 
-    <div class="container">
-    	<div class ="imagen">
-    		<img src="./img/panda.jpg">
+			<div class="sociales">
+	    		<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-instagram"></a>
+	    	</div>
+	    	<dialog id="modal" class= "modal">
+	    		<div id=modal_head class="modal_head">
+	    			<div>Modal title</div>
+	    			<span id="btn-close" class="btn-close">x</span>
+	    		</div>
+	    		<div id="modal_body" class="modal_body">
+ 					<img src="./img/pinguino.jpg">
+ 				</div>
+	    	</dialog>
     	</div>
-    	<div class = "message" id= "message"></div>
-	    <div class="texto">
-			<p> 
-				Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto
-		        
-		    </p>
-	    </div>
-
-    	<div class="sociales">
-    		<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-linkedin"></a>
-			<a href="#" class="fa fa-instagram"></a>
+    	<div id="resumen" class="resumen">
+    		<div class="message" id="message"></div>
+    		<div>
+    		<div class="titulo"><h2>Acerca de mi...</h2></div>
+    		<br>
+    			<p>
+    			 Egresado de la Licenciatura en Sistemas Computacionales.
+    			 Como intereses profesionales me gustaria crecer y prosperar profesionalmente
+    			 en el ambito de las TI.
+    			 Me considero una persona responsable, determinada, disfruto aprender y trabajar con gente 
+    			 de mi mismo perfil y me gusta portar ideas nuevas.
+    			 Finalmente me esfurzo por brindar nuevas maneras de trabajar, donde pueda adaptarme rapidamente y
+    			 cuntinuar mejorando.
+    			</p><br>
+    		<div class="sub-tema"><h2>Experiencia Laboral</h2></div><br>
+    			<p class="informacion">
+    			<h3>Analista de Base de Datos<br>Towa Software</h3><br>Octubre 2017 Enero2018<br>
+    			Actividades Desempeñadas:<br>
+    			<ul>
+    				<li>*Creación y diseño de BD en Mysql</li>
+    				<li>*Creación de diagramas UML</li>
+    				<li>*Analisis a los requirimientos del cliente<li>
+    				<li>*Creación y diseño de clases en lenguaje Java</li>	
+    			</ul>
+    			<br>
+    			
+    			<h3>Soporte Técnico<br>Soft-Gator</h3><br>Agosto 2016 Julio2017<br>
+    			Actividades Desempeñadas:<br>
+    			<ul>
+    				<li>*Reparacion de euipo de computo a usuarios</li>
+    				<li>*Adminidtracipon de la red LAN del cliente bajo Servidores Linux</li>
+    				<li>*Instalación y configuración de equipos IP<li>
+    				<li>Soporte técnico presencial y remoto a los usuarios</li>	
+    			</ul><br>
+    			
+    			<h3>Servicio Social<br>Hotel Bosques del Lago</h3><br>Enero 2016 Mayo2016<br>
+    			Creacion de un sistema de administracion del hotel con tecnología Java utlizando Java swing<br>
+    			para el diseño de la parte del GUI y utilizando BD Mysql<br>
+    			En esta plataforma se podia realizar lo siguiente:<br>
+    			<ul>
+    				<li>*Registrar nuevos clientes</li>
+    				<li>*Verificar habitaciones disponibles</li>
+    				<li>*Realizar reservaciones<li>
+    				<li>*Verificar los productos consumidos por el huespued</li><br>	
+    			</ul>
+    			</p>
+    		</div>
     	</div>
+    	 <div id="recursos" class="recursos">
+    	 	<div class="container-text">
+    	 		<h2>Git y Git Hub</h2>
+    	 		<p class ="git">Uso de esta plataforma para la administración de proyectos</p><br>
+    	 		<h2>Tecnología Java</h2>
+    	 		<p class="java">Desarrolllo de proyectos bajo la tecnología Java,Actualmente tomando curso en Udemy</p><br>
+    	 		<h2>Gestor de BD Mysql</h2>
+    	 		<p class ="mysql">Uso del Gestor de BD Mysql utilizando phpMyAdmin para su administración</p>		
+    	 	</div>
+    	 </div>
     </div>
-	
-
-	<script type="text/javascript">
+        <script type="text/javascript">
 			'use strict';
-			const saludo = 'Hola soy Brian Escalante'
+
+			(function factor(){
+
+
+
+				/** options menu **/
+			const option_resumen = document.getElementById("option_resumen");
+			const option_yo = document.getElementById("option_yo");
+			const option_recursos = document.getElementById("option_recursos");
+
+			/** elements view **/
+			const resumen_content = document.getElementById("resumen");
+			const yo_content = document.getElementById("yo");
+			const recursos_content = document.getElementById("recursos");
+
+
+			/** **/
+			const saludo = 'Hola soy Brian Escalante';
 			const message = document.getElementById("message");
 			message.innerHTML = `<span>${saludo}</span>`;
-	</script>
+
+			/**modal**/
+			const modal = document.getElementById("modal");
+			const button = document.getElementById("btn");
+
+			 button.addEventListener("click",function(){
+			 	modal.showModal();
+			 });		
+			/** defaults **/
+			resumen_content.classList.add("hidden");
+			recursos_content.classList.add("hidden");
+
+			
+
+			/**this code to the resument view like none **/
+			option_resumen.addEventListener("click", function(event){
+                 resumen_content.classList.remove("hidden");
+                 yo_content.classList.add("hidden");
+                 console.log("click resumen");
+             });
+
+            /**this code remove class hidden in yo_content anf other elements will be none visibility **/
+            option_yo.addEventListener("click", function(event){
+            	yo_content.classList.remove("hidden");
+            	resumen_content.classList.add("hidden");
+            	console.log("click yo");
+            }); 
+
+            option_recursos.addEventListener("click",function(event){
+             recursos_content.classList.remove("hidden");
+             recursos_content.classList.add("hidden");
+             console.log("click recursos");
+            }); 
+
+			})();
+			
+
+        </script>
 </body>
-</html>>
+</html>
