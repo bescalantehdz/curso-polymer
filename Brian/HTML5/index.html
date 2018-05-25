@@ -74,7 +74,7 @@
 		}
 
 		.menu_navbar li:hover > ul{
-				splay: block;
+				display: block;
 		}
 
 		.menu_navbar li ul li{
@@ -187,15 +187,17 @@
 		.container #resumen{
 			background: var(--background-color-resumen);
 			padding: 100px 100px 10px;
-			display: block;
+			
 		}
 
 		.container #resumen .titulo::first-line{
 			color:red;
+			font-size: 50px;
 		}
 
 		.container #resumen .sub-tema{	
 			color: #21b080;
+			font-size: 50px;
 		}
 
 		.container #resumen .sub-tema .informacion{
@@ -204,7 +206,7 @@
 			color: blue;
 		}
 
-		.container .hidden{
+		.hidden{
 			display: none;
 		}
 
@@ -228,32 +230,82 @@
 			transform: translateY(3px);
 		}
 
-		.container .recursos .container-text h2{
+		.container .recursos   h2{
 			color: #3390FF;
 			display:block;
 			padding: 0px 100px;
+			font-size: 50px;
+		}
+		
+		.recursos {
+			padding: 100px 40px;
 		}
 
+		.git{
+			font-size: 40px;
+			color: #FF8633;
+		}
 
-		.container .recursos .container-text .git{
+		.java{
+			font-size: 40px;
+			color:#1DA223;
+		}
+
+		.sql{
+			font-size:40px;
+			color:#080BCE;	
+		}
+
+		.container #blog .container-text h2{
 			display:block;
-			padding: 0px 100px;
-			font-weight: bold;
+			color:#33A5FF;
+			font-size: 50px;
 		}
 
-
-		.container .recursos .container-text .java{
-			display:block;
-			padding: 0px 100px;
-			font-weight: bold;
+		.container .blog  {
+			display: block;
+			padding: 0px 100px 200px;
 		}
 
-
-		.container .recursos .container-text .mysql{
-			font-weight:bold;
-			display:block;
-			padding: 0px 100px;
+		.reactjs {
+			padding-top: 100px; 
+			font-size: 50px;
+			margin-left: 50px;
 		}
+
+		.container .blog  {
+			display: block;
+			padding: 100px;
+		}
+
+		.nodejs{
+			padding-top: 50px; 
+			font-size: 50px;
+			margin-left:50px;
+
+		}
+
+		 .mitexto{
+			margin-left:50px; 
+		
+		}
+
+		.side_nav{
+			display: none;
+			text-align: center; 
+			font-size: 28px;	
+			width: 200px;
+			right: -200px;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(90,23,12,0.5);
+		}
+
+		.side_nav_activar{
+			right: 0;
+		}
+
 
 
 
@@ -283,7 +335,11 @@
 				margin: 6px;
 				padding: 0;
 				width: 20px;
-				cursor: pointer
+				cursor: pointer;
+			}
+
+			.side_nav{
+				display: initial;
 			}
 		}
 	</style>
@@ -292,7 +348,7 @@
 	<div class="menu"> 
       	<ul class="menu_navbar">
       		
-      		<li><a href="#"id="option_yo">YO</a></li>
+      		<li><a href="#"id="option_yo">Yo</a></li>
       	    <li><a href="#" id="option_resumen">Resumen</a></li>
       	    <li><a href="#"" id="option_contacto">Contacto</a>
 			<ul>
@@ -314,6 +370,15 @@
       		</ul>
       	</div>
     </div>
+   
+    <div class="side_nav">
+    	<ul>
+    		<li><a href="#"id="option_yo_mobile">yo</a></li>	
+    		<li><a href="#"id="option_resumen_mobile">Resumen</a></li>
+    		<li><a href="#"id="option_recursos_mobile">Recursos</a></li>
+    		<li><a href="#"id="option_blog_mobile">Blog</a></li>
+    	</ul>
+    </div>
 	<div class="container">
     	<div  id="yo" class="yo">
 	    	<div class ="imagen">
@@ -324,9 +389,6 @@
 				
 		    </div>
 
-		    <div class="button_ctn">
-		    	<button id="btn" name="btn" class="btn">Click</button>
-		    </div>
 
 			<div class="sociales">
 	    		<a href="#" class="fa fa-facebook"></a>
@@ -346,7 +408,6 @@
     	</div>
     	<div id="resumen" class="resumen">
     		<div class="message" id="message"></div>
-    		<div>
     		<div class="titulo"><h2>Acerca de mi...</h2></div>
     		<br>
     			<p>
@@ -391,18 +452,26 @@
     			</ul>
     			</p>
     		</div>
+   		</div>
+    	<div id="recursos" class="recursos">
+    	 	
+    	 		<h2 class="git">Git y Git Hub</h2>
+    	 		<p >Uso de esta plataforma para la administración de proyectos</p><br>
+    	 		<h2 class="java">Tecnología Java</h2>
+    	 		<p>Desarrolllo de proyectos bajo la tecnología Java,Actualmente tomando curso en Udemy</p><br>
+    	 		<h2 class="sql">Gestor de BD Mysql</h2>
+    	 		<p>Uso del Gestor de BD Mysql utilizando phpMyAdmin para su administración</p>		
     	</div>
-    	 <div id="recursos" class="recursos">
-    	 	<div class="container-text">
-    	 		<h2>Git y Git Hub</h2>
-    	 		<p class ="git">Uso de esta plataforma para la administración de proyectos</p><br>
-    	 		<h2>Tecnología Java</h2>
-    	 		<p class="java">Desarrolllo de proyectos bajo la tecnología Java,Actualmente tomando curso en Udemy</p><br>
-    	 		<h2>Gestor de BD Mysql</h2>
-    	 		<p class ="mysql">Uso del Gestor de BD Mysql utilizando phpMyAdmin para su administración</p>		
-    	 	</div>
-    	 </div>
+   		<div id="blog" class="blog">
+    	<div>
+    	<h2 class="reactjs">React JS: que es react js</h2><br>
+    		<p class="mitexto">React js es una librería Javascript creada ya hace un tiempo por Facebook, para construir interfaces de usuario, que te permitan crear aplicaciones SPA(single page application) más eficientes y funciona tanto en el lado cliente como en el servidor, haciendo posible la creación de aplicaciones isomórficas.</p>
+    	<h2 class="nodejs">Node JS</h2><br>
+    		<p class="mitexto">Node.js es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo.</p>
+    	</div>
+    	</div>
     </div>
+
         <script type="text/javascript">
 			'use strict';
 
@@ -410,58 +479,124 @@
 
 
 
-				/** options menu **/
+		    /** options menu **/
 			const option_resumen = document.getElementById("option_resumen");
 			const option_yo = document.getElementById("option_yo");
 			const option_recursos = document.getElementById("option_recursos");
+			const option_blog = document.getElementById("option_blog");
+			const option_yo_mobile = document.getElementById("option_yo_mobile");
+			const option_recursos_mobile = document.getElementById("option_recursos_mobile");
+			const option_blog_mobile = document.getElementById("option_blog_mobile");
+			const option_resumen_mobile = document.getElementById("option_resumen_mobile");
+		    
 
 			/** elements view **/
 			const resumen_content = document.getElementById("resumen");
 			const yo_content = document.getElementById("yo");
 			const recursos_content = document.getElementById("recursos");
+			const blog_content = document.getElementById("blog");
+			const get_button = document.querySelector(".menu_mobile");
+            const get_side_nav = document.querySelector(".side_nav");
 
-
-			/** **/
-			const saludo = 'Hola soy Brian Escalante';
-			const message = document.getElementById("message");
-			message.innerHTML = `<span>${saludo}</span>`;
-
-			/**modal**/
-			const modal = document.getElementById("modal");
-			const button = document.getElementById("btn");
-
-			 button.addEventListener("click",function(){
-			 	modal.showModal();
-			 });		
-			/** defaults **/
-			resumen_content.classList.add("hidden");
-			recursos_content.classList.add("hidden");
 
 			
+			/** defaults **/
+				recursos_content.classList.add("hidden");
+				resumen_content.classList.add("hidden");
+				blog_content.classList.add("hidden");
+		
+			
+		    option_yo.addEventListener("click", function(event){
+            	yo_content.classList.remove("hidden");
+            	resumen_content.classList.add("hidden");
+            	recursos_content.classList.add("hidden");
+            	blog_content.classList.add("hidden");
+            	console.log("click yo");
+            	
 
+            });			
 			/**this code to the resument view like none **/
 			option_resumen.addEventListener("click", function(event){
                  resumen_content.classList.remove("hidden");
                  yo_content.classList.add("hidden");
+                 recursos_content.classList.add("hidden");
+            	 blog_content.classList.add("hidden");
                  console.log("click resumen");
              });
 
             /**this code remove class hidden in yo_content anf other elements will be none visibility **/
-            option_yo.addEventListener("click", function(event){
-            	yo_content.classList.remove("hidden");
-            	resumen_content.classList.add("hidden");
-            	console.log("click yo");
-            }); 
+           
 
-            option_recursos.addEventListener("click",function(event){
+             option_recursos.addEventListener("click",function(event){
              recursos_content.classList.remove("hidden");
-             recursos_content.classList.add("hidden");
+             yo_content.classList.add("hidden");
+             resumen_content.classList.add("hidden");
+             blog_content.classList.add("hidden");
              console.log("click recursos");
             }); 
 
-			})();
-			
+             option_blog.addEventListener("click",function(event){
+             blog_content.classList.remove("hidden");
+             yo_content.classList.add("hidden");
+             resumen_content.classList.add("hidden");
+             recursos_content.classList.add("hidden");
+             console.log("click blog");
+		 	});
 
-        </script>
+             /*opcines mobile*/
+
+		    option_yo_mobile.addEventListener("click", function(event){
+            	yo_content.classList.remove("hidden");
+            	resumen_content.classList.add("hidden");
+            	recursos_content.classList.add("hidden");
+            	blog_content.classList.add("hidden");
+            	get_side_nav.classList.remove("side_nav_activar");
+            	console.log("click yo");
+            	
+
+            });			
+			/**this code to the resument view like none **/
+			option_resumen_mobile.addEventListener("click", function(event){
+                 resumen_content.classList.remove("hidden");
+                 yo_content.classList.add("hidden");
+                 recursos_content.classList.add("hidden");
+            	 get_side_nav.classList.remove("side_nav_activar");
+            	 blog_content.classList.add("hidden");
+                 console.log("click resumen");
+             });
+
+            /**this code remove class hidden in yo_content anf other elements will be none visibility **/
+           
+
+             option_recursos_mobile.addEventListener("click",function(event){
+             recursos_content.classList.remove("hidden");
+             yo_content.classList.add("hidden");
+             resumen_content.classList.add("hidden");
+             blog_content.classList.add("hidden");
+             get_side_nav.classList.remove("side_nav_activar");
+             console.log("click recursos");
+            }); 
+
+             option_blog_mobile.addEventListener("click",function(event){
+             blog_content.classList.remove("hidden");
+             yo_content.classList.add("hidden");
+             resumen_content.classList.add("hidden");
+             get_side_nav.classList.remove("side_nav_activar");
+             recursos_content.classList.add("hidden");
+             console.log("click blog");
+		 	});
+
+
+
+
+             get_button.addEventListener("click",function(event){
+             	console.log("accion");
+                 get_side_nav.classList.add("side_nav_activar");
+
+             });
+
+
+        })();
+		</script>
 </body>
 </html>
