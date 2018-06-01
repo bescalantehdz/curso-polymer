@@ -1,0 +1,62 @@
+
+<link rel="import" href="../polymer/polymer-element.html">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+
+<dom-module id="pagina-blog">
+  <template>
+    <style>
+      :host {
+      }
+      .reactjs{
+            
+            font-size: 50px;
+            color:rgb(173, 55, 55);
+      }
+      .nodejs {
+          
+            font-size: 50px;
+            color:rgb(11, 132, 232);
+          } 
+      .main-container p{
+        font-family:'Source Sans Pro', sans-serif;
+        font-size:18px;
+        font-weight: bold;
+
+      }  
+
+    </style>
+    <div class="main-container">
+      <h2 class="reactjs">React JS: que es react js</h2>
+         <p>React js es una librería Javascript creada ya hace un tiempo por Facebook, para construir interfaces de usuario, que te permitan crear aplicaciones SPA(single page application) más eficientes y funciona tanto en el lado cliente como en el servidor, haciendo posible la creación de aplicaciones isomórficas.</p>
+      <h2 class="nodejs">Node Js</h2>
+        <P>Node.js es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo.
+        </P>
+
+  </div>
+  </template>
+
+  <script>
+    /**
+     * `pagina-blog`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PaginaBlog extends Polymer.Element {
+      static get is() { return 'pagina-blog'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'pagina-blog'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PaginaBlog.is, PaginaBlog);
+  </script>
+</dom-module>

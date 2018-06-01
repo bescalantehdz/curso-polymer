@@ -1,0 +1,102 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="pagina-resumen">
+  <template>
+    <style>
+      :host {
+    }
+    .main-container .subtitulo1{
+          color: red;
+          font-size: 50px;
+          display: block;
+          padding:70px;
+    }
+
+    .subtitulo1 p{
+      display: block;
+      font-size: 10px;
+      font-weight: bold;
+
+    }
+
+    .main-container .subtitulo2 {  
+      color: #21b080;
+      font-size: 50px;
+      display: block;
+      
+    } 
+
+    .subtitulo2 .subtema1{
+      font-weight: bold;
+    }
+
+    .subtitulo2 .subtema2{
+      font-weight: bold;
+    }
+
+   .subtitulo2 .subtema3{
+      font-weight: bold;
+    }
+
+
+    </style>
+    <div class="main-container">
+      <h2 class="subtitulo1">Acerca de mi....</h2>
+        <p>Egresado de la Licenciatura en Sistemas Computacionales. Como intereses profesionales me gustaria crecer y prosperar profesionalmente en el ambito de las TI. Me considero una persona responsable, determinada, disfruto aprender y trabajar con gente de mi mismo perfil y me gusta portar ideas nuevas. Finalmente me esfurzo por brindar nuevas maneras de trabajar, donde pueda adaptarme rapidamente y cuntinuar mejorando.</p><br>
+       <h2 class="subtitulo2">Experiencia Laboral</h2><br>
+        <h3 class="subtema1">Analista de Base de Datos<br>Towa Software</h3>
+         <p>Octubre 2017 Enero 2018</p>
+         <p>Actividades Desempeñadas:</p><br>
+          <ul>
+            <li>Creación y diseño de BD en Mysql</li>
+            <li>Creación de diagramas UML</li>
+            <li>Analisis a los requerimientos del cliente</li>
+            <li>Creación y Diseño de clases en lenguaje Java</li>
+       </ul>
+      <h3 class="subtema2">Soporte Técnico<br>Soft-Gator</h3>
+       <p>Agosto 2016 Julio 2017</p>
+       <p>Actividades Desempeñadas:</p><br>
+       <ul>
+         <li>Reparacion de euipo de computo a usuarios</li>
+         <li>Adminidtracipon de la red LAN del cliente bajo Servidores Linux</li>
+         <li>Instalación y configuración de equipos IP</li>
+         <li>Soporte técnico presencial y remoto a los usuarios</li>
+       </ul>
+      <h3 class="subtema3">Servicio Social<br>Hotel Bosques del Lago</h3>
+       <p>Enero 2016 Mayo 2017</p>
+       <p>Creacion de un sistema de administracion del hotel con tecnología Java</p>
+       <p>utilizando Java swing para el diseño de la parte del GUI y utilizando BD Mysql</p>
+       <p>En esta plataforma se podia realizar lo siguiente:</p>
+       <ul>
+         <li>Registrar nuevos clientes</li>
+         <li>Verificar habitaciones disponibles</li>
+         <li>Realizar reservaciones</li>
+         <li>Verificar los productos consumidos por el huespued</li>
+       </ul>
+     </div>
+    </template>
+
+  <script>
+    /**
+     * `pagina-resumen`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PaginaResumen extends Polymer.Element {
+      static get is() { return 'pagina-resumen'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'pagina-resumen'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PaginaResumen.is, PaginaResumen);
+  </script>
+</dom-module>

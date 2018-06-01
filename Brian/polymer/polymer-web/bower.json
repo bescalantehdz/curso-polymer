@@ -6,7 +6,8 @@
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3",
     "nav-bar": "../nav-bar/",
     "imagen-brian": "../imagen-brian/",
-    "social-bar:" "../social-bar/"
+    "social-bar": "../social-bar/",
+    "pagina-resumen": "../pagina-resumen/"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",

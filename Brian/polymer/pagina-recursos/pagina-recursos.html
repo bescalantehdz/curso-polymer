@@ -1,13 +1,47 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 <dom-module id="pagina-recursos">
   <template>
     <style>
       :host {
-        display: block;
+          }
+
+      .main-container .tecnologia-java{
+        font-size: 40px;
+        color: #FF8633;
+        font-weight: bold;
+      } 
+
+
+      .main-container .git{
+        font-size: 40px;
+        color:rgb(11, 132, 232);
+        font-weight: bold;
+      } 
+
+      .main-container .mysql{
+        font-size: 40px;
+        color: rgb(11, 234, 178);
+        font-weight: bold;
       }
+
+      .main-container p{
+        font-family: 'Source Sans Pro', sans-serif; 
+        font-size: 20px;
+        font-weight: bold;  
+      }
+
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div class="main-container">
+      <h2 class="git">Git y gitHub</h2>
+      <p>Uso de esta plataforma para la administración de proyectos</p>
+      <h2 class="tecnologia-java">Tecnología Java</h2>
+      <p>Desarrolllo de proyectos bajo la tecnología Java,Actualmente tomando curso en Udemy<p>
+      <h2 class="mysql">Gestor de BD Mysql</h2>
+      <p>Uso del Gestor de BD Mysql utilizando phpMyAdmin para su administración</p>
+
+    </div>
   </template>
 
   <script>
@@ -29,8 +63,9 @@
           }
         };
       }
+      
     }
-
+     
     window.customElements.define(PaginaRecursos.is, PaginaRecursos);
   </script>
 </dom-module>
