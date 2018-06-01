@@ -1,0 +1,84 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="nav-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      *{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-decoration: none;
+          border: none;
+          outline: none;
+        }
+
+      .menu .menu_navbar{
+       background-color: #7C7EFF;
+       overflow: hidden;
+      }
+
+      .menu .menu_navbar li{
+        float: left;
+      }
+
+      .menu .menu_navbar li a{
+        display: inline;
+        text-align: center;
+        padding: 14px 16px;
+        font-family:'Montserrat', sans-serif;
+        font-size: 25px;
+        color: white;
+      }
+
+      .menu .menu_navbar li a:hover{
+       background-color: #111;
+      }
+    </style>
+
+     <div class="menu">
+      <ul class="menu_navbar">
+        <li><a href="#" id="option_yo">Yo</a></li> 
+        <li><a href="#" id="option_resumen">Resumen</a></li>
+        <li><a href="#" id="option_contacto">Contacto<a></li> 
+        <div class="dropdown">  
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <li><a href="#" id="option_recursos">Recursos</a></li>
+        <li><a href="#" id="option_blog">Blog<a></li>                                         
+      </ul>
+    
+     
+
+  </template>
+
+  <script>
+    /**
+     * `nav-bar`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class NavBar extends Polymer.Element {
+      static get is() { return 'nav-bar'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'nav-bar'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(NavBar.is, NavBar);
+  </script>
+</dom-module>

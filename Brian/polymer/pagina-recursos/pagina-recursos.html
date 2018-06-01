@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="pagina-recursos">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `pagina-recursos`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PaginaRecursos extends Polymer.Element {
+      static get is() { return 'pagina-recursos'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'pagina-recursos'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PaginaRecursos.is, PaginaRecursos);
+  </script>
+</dom-module>

@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="import" href="../../bower_components/nav-bar/nav-bar.html">
+<link rel="import" href="../../bower_components/imagen-brian/imagen-brian.html">
+<link rel="import" href="../../bower_components/sociales-bar/sociales-bar.html">
+
+
+<dom-module id="polymer-web-app">
+  <template>
+    <style>
+      :host {
+      }
+   
+    </style>
+    <nav-bar></nav-bar>
+    <imagen-brian></imagen-brian>
+    <sociales-bar icono='[{"img":"fab fa-facebook-f"}]'></sociales-bar>
+    </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PolymerWebApp extends Polymer.Element {
+      static get is() { return 'polymer-web-app'; }
+      static get properties() {
+        return {
+            
+
+          }
+        };
+      }
+      
+
+    window.customElements.define(PolymerWebApp.is, PolymerWebApp);
+  </script>
+</dom-module>

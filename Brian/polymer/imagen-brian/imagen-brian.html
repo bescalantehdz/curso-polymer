@@ -1,0 +1,56 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="imagen-brian">
+  <template>
+    <style>
+      :host {
+             
+      }
+     .container{
+      background: #2EAA16;
+      padding: 100px 20px 10px 20px;
+
+       }
+
+      .container #yo{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;    
+        padding: 100px 20px 10px 20px;
+      }      
+    </style>
+
+      <div class="container">
+      <div id="yo" class="yo">
+        <div class="imagen">
+          <img src="./polymer-web/img/mainphoto.jpg">
+        </div>
+      </div>
+    </div>
+    
+  </template>
+
+  <script>
+    /**
+     * `imagen-brian`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ImagenBrian extends Polymer.Element {
+      static get is() { return 'imagen-brian'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'imagen-brian'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ImagenBrian.is, ImagenBrian);
+  </script>
+</dom-module>

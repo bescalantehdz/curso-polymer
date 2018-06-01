@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<dom-module id="polymer-web-img.html">
+	<template>
+    <style>
+      :host {
+        
+    }
+     
+   
+	</style>
+
+
+    <div class="container">
+      <div id="yo" class="yo">
+        <div class="imagen">
+          <img src="./img/mainphoto.jpg">
+        </div>
+      </div>
+    </div>
+
+ </template>
+
+ <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PolymerWebApp extends Polymer.Element {
+      static get is() { return 'polymer-web-img'; }
+      static get properties() {
+        return {
+            
+
+          }
+        };
+      }
+    
+
+    window.customElements.define(PolymerWebApp.is, PolymerWebApp);
+  </script>
+</dom-module>

@@ -1,0 +1,21 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="polymer-test">
+<template>
+  <style type="text/css">
+    :host{
+      background-color: blue;
+      display: block;
+    }
+  </style>
+  <h1>Hola [[name]]</h1>
+</template>
+  <script>
+    Polymer({
+      is:"polymer-test",
+      properties:{
+        name: String
+      }  
+    })    
+  </script>
+</dom-module>

@@ -1,0 +1,66 @@
+  
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<dom-module id="sociales-bar">
+  <template>
+    <style>
+      :host {
+      }
+    .container-social-bar{
+      width:100px;
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      text-align: center;
+      font-size: 30px;
+    }
+
+    i:hover{
+      color: red;
+      cursor: pointer;
+    }
+
+    </style>
+    <div class="contianer-social-bar">
+      <div class="grid-container">
+        <template is="dom-repeat" items="[[icono]]" as="arreglo">
+          <div>
+            <i class$="{{arreglo.img}}"></i>
+          </div>     
+        </template>
+      </div>
+    </div>
+  </template>
+  <script>
+    /**
+     * `sociales-bar`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class SocialesBar extends Polymer.Element {
+      static get is() { return 'sociales-bar'; }
+      static get properties() {
+        return {
+          icono: {
+            type: Array,
+            value: [ 
+
+           /*{"valor":"fab fa-facebook-f"},
+           {"valor":"fab fa-twitter"},
+           {"valor":"fab fa-linkedin-in"},
+           {"valor":"fab fa-instagram"}*/
+
+           ]
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SocialesBar.is, SocialesBar);
+  </script>
+</dom-module>
